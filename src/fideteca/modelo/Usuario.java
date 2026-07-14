@@ -1,17 +1,27 @@
 package fideteca.modelo;
 
 /**
- * Clase Usuario
- * Representa a un usuario de la biblioteca (estudiante, profesor, etc).
- * Se usara mas adelante como el dato almacenado en el Arbol Binario
- * de Busqueda (registro de usuarios por carne).
+ * Clase Usuario.
+ *
+ * Representa a una persona registrada en la biblioteca.
+ * Cada usuario se almacena en el árbol binario de búsqueda
+ * utilizando el carné como identificador único.
+ *
+ * @author Luis
  */
 public class Usuario {
 
-    private String carne;   // Identificador unico, usado como llave en el arbol
+    private String carne;
     private String nombre;
-    private String tipo;    // "Estudiante", "Profesor", etc.
+    private String tipo;
 
+    /**
+     * Construye un usuario.
+     *
+     * @param carne identificador único del usuario
+     * @param nombre nombre completo
+     * @param tipo tipo de usuario
+     */
     public Usuario(String carne, String nombre, String tipo) {
         this.carne = carne;
         this.nombre = nombre;
@@ -32,6 +42,9 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "[" + carne + "] " + nombre + " (" + tipo + ")";
+        return "[" + carne + "] "
+                + nombre
+                + " - "
+                + tipo;
     }
 }

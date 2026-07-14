@@ -2,7 +2,7 @@ package excepciones;
 
 /**
  * Excepcion personalizada que se lanza cuando un campo obligatorio
- * del formulario (distinto al nombre) se deja vacio.
+ * del formulario se deja vacio.
  */
 public class CampoVacioException extends Exception {
 
